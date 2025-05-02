@@ -53,6 +53,7 @@ public class Graph {
 		System.out.println("Cost: " + cost);
 		System.out.println("Time: " + String.format("%.3fs", elapsedTime));
 		System.out.println("Time (with sorting): " + String.format("%.3fs", (double)(System.nanoTime() - sortTimer) / 1_000_000_000));
+		System.out.println("SPT size: " + this.spanningTree.size());
 
 		// Spanning Tree output
 		/*for (int i = 0; i < this.spanningTree.size(); i++) {
