@@ -25,12 +25,7 @@ public class Graph {
 		long cost = 0;
 		long sortTimer = System.nanoTime();
 
-		Collections.sort(this.edgeList, new Comparator<Edge>() {
-			@Override
-			public int compare(Edge e1, Edge e2) {
-				return Integer.compare(e1.getCost(), e2.getCost());
-			}
-		});
+		Collections.sort(this.edgeList, Comparator.comparingInt(Edge::getCost));
 
 		if (!minimum) {
 			Collections.reverse(this.edgeList);
